@@ -1,0 +1,1 @@
+sed -i -e 's/\r$//' /scripts/rs-init.sh
