@@ -10,7 +10,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27017:27017
+      - 30000:27017
     depends_on:
       - mongo2
       - mongo3
@@ -26,7 +26,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27018:27017
+      - 30001:27017
     restart: always
     entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
   mongo3:
@@ -35,7 +35,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27019:27017
+      - 30002:27017
     restart: always
     entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "dbrs" ]
 
